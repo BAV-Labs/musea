@@ -13,8 +13,19 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
+        ink: "hsl(var(--ink))",
+        "ink-soft": "hsl(var(--ink-soft))",
+        paper: "hsl(var(--paper))",
+        "paper-deep": "hsl(var(--paper-deep))",
+        beige: "hsl(var(--beige))",
+        "beige-deep": "hsl(var(--beige-deep))",
+        "accent-soft": "hsl(var(--accent-soft))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -62,6 +73,20 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        '3xl': '1.75rem',
+        '4xl': '2.25rem',
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        elevated: "var(--shadow-elevated)",
+        phone: "var(--shadow-phone)",
+        glow: "var(--shadow-glow)",
+      },
+      backgroundImage: {
+        'gradient-warm': "var(--gradient-warm)",
+        'gradient-paper': "var(--gradient-paper)",
+        'gradient-ink': "var(--gradient-ink)",
+        'gradient-accent': "var(--gradient-accent)",
       },
       keyframes: {
         "accordion-down": {
