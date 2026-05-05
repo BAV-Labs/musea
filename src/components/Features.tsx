@@ -1,10 +1,9 @@
 import { Compass, Search, LayoutGrid, Heart, FolderOpen, FileText } from "lucide-react";
-import { PhoneFrame } from "./PhoneFrame";
-import { AppScreen } from "./AppScreen";
-import portrait from "@/assets/art-portrait.jpg";
-import sculpture from "@/assets/art-sculpture.jpg";
-import ukiyoe from "@/assets/art-ukiyoe.jpg";
-import impressionist from "@/assets/art-impressionist.jpg";
+import homescreen from "@/assets/homescreen.png";
+import artworkDetail from "@/assets/artwork-detail.png";
+import artworkInfo from "@/assets/artwork-info.png";
+import highlights from "@/assets/highlights.png";
+import favorites from "@/assets/your-collections.png";
 
 const features = [
   { icon: Compass, title: "Discover", text: "Hand-curated openings into the collection — fresh works each visit." },
@@ -33,21 +32,21 @@ export const Features = () => {
           {/* Visual composition */}
           <div className="lg:col-span-6 lg:sticky lg:top-28">
             <div className="relative h-[540px] bg-gradient-paper rounded-3xl border border-border overflow-hidden grain">
-              <div className="absolute top-10 left-8">
-                <PhoneFrame size="md" className="rotate-[-4deg]">
-                  <AppScreen variant="search" image={ukiyoe} />
-                </PhoneFrame>
-              </div>
-              <div className="absolute bottom-8 right-6">
-                <PhoneFrame size="md" className="rotate-[6deg]">
-                  <AppScreen variant="categories" image={impressionist} />
-                </PhoneFrame>
-              </div>
-              <div className="absolute top-1/2 right-12 -translate-y-1/2 hidden xl:block">
-                <PhoneFrame size="sm" className="rotate-[-8deg]">
-                  <AppScreen variant="collections" image={portrait} />
-                </PhoneFrame>
-              </div>
+              <div className="absolute top-10 left-8 z-30">
+  <div className="w-[260px] rotate-[-2deg]">
+    <img src={homescreen} className="w-full rounded-2xl shadow-2xl" />
+  </div>
+</div>
+              <div className="absolute inset-0 flex items-center justify-center z-30">
+  <div className="w-[210px] rotate-[0deg]">
+    <img src={highlights} className="w-full rounded-2xl shadow-xl" />
+  </div>
+</div>
+              <div className="absolute top-1/2 right-12 -translate-y-1/2 hidden xl:block z-10 opacity-80">
+  <div className="w-[200px] rotate-[3deg]">
+    <img src={artworkDetail} className="w-full rounded-2xl shadow-lg" />
+  </div>
+</div>
               <div className="absolute top-6 right-6 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                 Plate i
               </div>

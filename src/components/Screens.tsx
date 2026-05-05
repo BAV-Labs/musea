@@ -1,18 +1,17 @@
-import { PhoneFrame } from "./PhoneFrame";
-import { AppScreen } from "./AppScreen";
-import portrait from "@/assets/art-portrait.jpg";
-import sculpture from "@/assets/art-sculpture.jpg";
-import ukiyoe from "@/assets/art-ukiyoe.jpg";
-import impressionist from "@/assets/art-impressionist.jpg";
-import egyptian from "@/assets/art-egyptian.jpg";
+import homescreen from "@/assets/homescreen.png";
+import artworkDetail from "@/assets/artwork-detail.png";
+import artworkInfo from "@/assets/artwork-info.png";
+import categories from "@/assets/departments.png";
+import favorites from "@/assets/your-collections.png";
+import visit from "@/assets/visit.png";
 
 const screens = [
-  { variant: "discover" as const, image: portrait, title: "Discover", caption: "Curated openings into the collection." },
-  { variant: "search" as const, image: ukiyoe, title: "Search", caption: "Across 470,000+ open access works." },
-  { variant: "details" as const, image: impressionist, title: "Details", caption: "Full provenance, medium and context.", artworkTitle: "Water Lilies" },
-  { variant: "categories" as const, image: egyptian, title: "Categories", caption: "Browse by department and culture." },
-  { variant: "favorites" as const, image: sculpture, title: "Favorites", caption: "Mark works. Return to them anytime." },
-  { variant: "collections" as const, image: portrait, title: "Collections", caption: "Build your own private galleries." },
+  { variant: "discover" as const, image: homescreen, title: "Discover", caption: "Curated openings into the collection." },
+  { variant: "search" as const, image: artworkDetail, title: "Details", caption: "Across 470,000+ open access works." },
+  { variant: "details" as const, image: artworkInfo, title: "Learn More", caption: "Full provenance, medium and context.", artworkTitle: "Water Lilies" },
+  { variant: "categories" as const, image: categories, title: "Categories", caption: "Browse by department and culture." },
+  { variant: "favorites" as const, image: favorites, title: "Favorites", caption: "Mark works. Return to them anytime." },
+  { variant: "visit" as const, image: visit, title: "Visit", caption: "Find all the info about visiting the museum." },
 ];
 
 export const Screens = () => (
@@ -43,9 +42,13 @@ export const Screens = () => (
               PL. {String(i + 1).padStart(2, "0")}
             </div>
             <div className="mt-4 mb-6 transform-gpu group-hover:scale-[1.02] transition-transform duration-700">
-              <PhoneFrame size="sm">
-                <AppScreen variant={s.variant} image={s.image} title={s.artworkTitle} />
-              </PhoneFrame>
+              <div className="w-[180px]">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full h-auto block rounded-2xl shadow-lg"
+                />
+              </div>
             </div>
             <figcaption className="text-center">
               <div className="font-display text-xl text-ink">{s.title}</div>

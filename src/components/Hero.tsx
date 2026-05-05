@@ -1,10 +1,10 @@
 import { Button } from "./ui/button";
-import { PhoneFrame } from "./PhoneFrame";
-import { AppScreen } from "./AppScreen";
 import { ArrowDown, Play } from "lucide-react";
-import portrait from "@/assets/art-portrait.jpg";
-import sculpture from "@/assets/art-sculpture.jpg";
-import egyptian from "@/assets/art-egyptian.jpg";
+import homescreen from "@/assets/homescreen.png";
+import artworkDetail from "@/assets/artwork-detail.png";
+import artworkInfo from "@/assets/artwork-info.png";
+import categories from "@/assets/departments.png";
+import favorites from "@/assets/your-collections.png";
 
 export const Hero = () => {
   return (
@@ -66,19 +66,19 @@ export const Hero = () => {
           {/* Phone composition */}
           <div className="lg:col-span-5 relative h-[520px] sm:h-[600px]">
             <div className="absolute top-8 left-4 sm:left-12 animate-float" style={{ animationDelay: "0s" }}>
-              <PhoneFrame size="md" className="rotate-[-6deg]">
-                <AppScreen variant="discover" image={portrait} title="Vermeer Study" meta="European Paintings" />
-              </PhoneFrame>
+              <div className="w-[220px] rotate-[-4deg]">
+  <img src={categories} className="w-full rounded-2xl shadow-xl" />
+</div>
             </div>
             <div className="absolute top-0 right-0 sm:right-4 animate-float" style={{ animationDelay: "1.5s" }}>
-              <PhoneFrame size="md" className="rotate-[5deg]">
-                <AppScreen variant="details" image={sculpture} title="Marble Bust" />
-              </PhoneFrame>
+              <div className="w-[220px] rotate-[2deg]">
+  <img src={artworkDetail} className="w-full rounded-2xl shadow-xl" />
+</div>
             </div>
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-32 animate-float hidden sm:block" style={{ animationDelay: "0.8s" }}>
-              <PhoneFrame size="sm" className="rotate-[-2deg]">
-                <AppScreen variant="favorites" image={egyptian} />
-              </PhoneFrame>
+              <div className="w-[220px] rotate-[-1deg]">
+  <img src={homescreen} className="w-full rounded-2xl shadow-xl" />
+</div>
             </div>
           </div>
         </div>

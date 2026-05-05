@@ -1,4 +1,4 @@
-import gallery from "@/assets/gallery-hero.jpg";
+import gallery from "@/assets/homescreen.png";
 
 export const About = () => (
   <section id="about" className="py-24 sm:py-32 bg-ink text-paper relative overflow-hidden">

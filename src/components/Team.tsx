@@ -2,8 +2,8 @@ import bavLogo from "@/assets/bav-labs.png";
 
 const team = [
   { name: "Benjamin Sparwasser", role: "Engineering" },
-  { name: "Alex Jäger Peña", role: "Design" },
-  { name: "Valeria Bilous", role: "Product" },
+  { name: "Alex Jäger Peña", role: "Engineering" },
+  { name: "Valeria Bilous", role: "Engineering" },
 ];
 
 export const Team = () => (
