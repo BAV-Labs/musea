@@ -1,3 +1,2 @@
-# Welcome to your Lovable project
+# Musea - The Met Collection
 
-TODO: Document your project here
